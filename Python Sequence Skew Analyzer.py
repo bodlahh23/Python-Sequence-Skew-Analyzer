@@ -1,15 +1,13 @@
 import matplotlib.pyplot as plt
 
-# -----------------------
+
 # Example DNA sequence
-# -----------------------
 dna_sequence = (
     "ATGCGTACGTAGCTAGCTAGCTAGCTAGCGTACGTAGCTAGCTAGCATGCTAGCTAGCTA"
 )
 
-# -----------------------
+
 # Function: compute GC content, GC skew, and AT skew in sliding windows
-# -----------------------
 def compute_skews(sequence, window_size=10):
     gc_content_values = []
     gc_skew_values = []
@@ -42,15 +40,13 @@ def compute_skews(sequence, window_size=10):
 
     return gc_content_values, gc_skew_values, at_skew_values
 
-# -----------------------
+
 # Run computation
-# -----------------------
 window_size = 10
 gc_content, gc_skew, at_skew = compute_skews(dna_sequence, window_size)
 
-# -----------------------
+
 # Plot results
-# -----------------------
 positions = range(len(gc_content))
 
 plt.figure(figsize=(12,4))
